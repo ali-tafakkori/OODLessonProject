@@ -113,6 +113,7 @@ namespace OODLessonProject
             this.CDescription.HeaderText = "Description";
             this.CDescription.Name = "CDescription";
             this.CDescription.ReadOnly = true;
+            this.CDescription.Width = 350;
             // 
             // CDate
             // 
