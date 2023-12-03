@@ -29,7 +29,9 @@ namespace OODLessonProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bOpen = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +46,7 @@ namespace OODLessonProject
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.bOpen);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -52,6 +55,17 @@ namespace OODLessonProject
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 110);
             this.panel1.TabIndex = 1;
+            // 
+            // bOpen
+            // 
+            this.bOpen.Enabled = false;
+            this.bOpen.Location = new System.Drawing.Point(713, 75);
+            this.bOpen.Name = "bOpen";
+            this.bOpen.Size = new System.Drawing.Size(75, 23);
+            this.bOpen.TabIndex = 3;
+            this.bOpen.Text = "Open";
+            this.bOpen.UseVisualStyleBackColor = true;
+            this.bOpen.Click += new System.EventHandler(this.BOpen_Click);
             // 
             // pictureBox1
             // 
@@ -87,6 +101,8 @@ namespace OODLessonProject
             // 
             // dgvProjects
             // 
+            this.dgvProjects.AllowUserToAddRows = false;
+            this.dgvProjects.AllowUserToDeleteRows = false;
             this.dgvProjects.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvProjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -98,9 +114,22 @@ namespace OODLessonProject
             this.dgvProjects.MultiSelect = false;
             this.dgvProjects.Name = "dgvProjects";
             this.dgvProjects.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProjects.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProjects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProjects.ShowCellErrors = false;
+            this.dgvProjects.ShowCellToolTips = false;
+            this.dgvProjects.ShowEditingIcon = false;
+            this.dgvProjects.ShowRowErrors = false;
             this.dgvProjects.Size = new System.Drawing.Size(800, 340);
             this.dgvProjects.TabIndex = 2;
+            this.dgvProjects.SelectionChanged += new System.EventHandler(this.DgvProjects_SelectionChanged);
             // 
             // CName
             // 
@@ -156,5 +185,6 @@ namespace OODLessonProject
         private System.Windows.Forms.DataGridViewTextBoxColumn CName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn CDate;
+        private System.Windows.Forms.Button bOpen;
     }
 }
