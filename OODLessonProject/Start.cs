@@ -22,13 +22,22 @@ namespace OODLessonProject
         {
             DataGridViewRow row = new DataGridViewRow();
             row.Cells.AddRange(new DataGridViewCell[] {
-            new DataGridViewTextBoxCell{ Value = "عبارت پسوندی با استک",},
-            new DataGridViewTextBoxCell{ Value = " با استفاده از کالس Stack طراحی شده در تمرین قبل برنامهای به زبان #C بنویسید که یک عبارت میانوندی 
-را با استفاده از پشته به یک عبارت پسوندی تبدیل کند )الگوریتم تبدیل در ابتدای این جزوه ارائه شده است(."},
+            new DataGridViewTextBoxCell{ Value = "Paratice 1",},
             new DataGridViewTextBoxCell{ Value = "Hi"},
+            new DataGridViewTextBoxCell{ Value = " - "},
             });
 
             dgvProjects.Rows.Add(row);
+        }
+
+        private void BOpen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DgvProjects_SelectionChanged(object sender, EventArgs e)
+        {
+            bOpen.Enabled = true;
         }
     }
 }
