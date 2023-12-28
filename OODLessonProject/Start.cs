@@ -40,6 +40,9 @@ namespace OODLessonProject
                     case 0:
                         new P1Form().Show();
                         break;
+                    case 1:
+                        new P2Form().Show();
+                        break;
                 }
             }
         }
