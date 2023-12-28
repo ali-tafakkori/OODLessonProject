@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Windows.Forms;
 
-namespace OODLessonProject
+namespace OODLessonProject.P2
 {
     public partial class P2Form : Form
     {
@@ -10,84 +10,21 @@ namespace OODLessonProject
         {
             InitializeComponent();
         }
-        private void BConvert_Click(object sender, System.EventArgs ev)
+        private void BCalculate_Click(object sender, EventArgs ev)
         {
-            string input = tbInput.Text;
-            string output = Convert(input);
+            string input = tbRadius.Text;
 
-            lOutput.Text = "Output: " + output;
-        }
-
-        string Convert(string expression)
-        {
-            string[] tokens = expression.Split(' ');
-
-            Stack operators = new Stack();
-            Queue postfix = new Queue();
-
-            foreach (string token in tokens)
+            try
             {
-                if (IsOperator(token))
-                {
-                    while (operators.Count > 0 && IsHigherPrecedence((string)operators.Peek(), token))
-                    {
-                        postfix.Enqueue(operators.Pop());
-                    }
-                    operators.Push(token);
-                }
-                else if (token == "(")
-                {
-                    operators.Push(token);
-                }
-                else if (token == ")")
-                {
-                    while ((string)operators.Peek() != "(")
-                    {
-                        postfix.Enqueue(operators.Pop());
-                    }
-                    operators.Pop();
-                }
-                else
-                {
-                    postfix.Enqueue(token);
-                }
+                int radius = int.Parse(input);
+                Circle circle = new Circle(radius);
+
+                lPerimeter.Text = "Perimeter: " + circle.Perimeter();
+                lArea.Text = "Area: " + circle.Area();
             }
-
-            while (operators.Count > 0)
+            catch (Exception e)
             {
-                postfix.Enqueue(operators.Pop());
-            }
-
-            return string.Join(" ", postfix.ToArray());
-        }
-
-        bool IsOperator(string token)
-        {
-            return token == "+" || token == "-" || token == "*" || token == "/" || token == "^";
-        }
-
-        bool IsHigherPrecedence(string op1, string op2)
-        {
-            int op1Precedence = GetOperatorPrecedence(op1);
-            int op2Precedence = GetOperatorPrecedence(op2);
-
-            return op1Precedence >= op2Precedence;
-        }
-
-        int GetOperatorPrecedence(string op)
-        {
-            switch (op)
-            {
-                case "+":
-                case "-":
-                    return 1;
-                case "*":
-                case "/":
-                    return 2;
-                case "^":
-                    return 3;
-                default:
-                    return 0;
+                MessageBox.Show(e.ToString());
             }
         }
     }
