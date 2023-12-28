@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Windows.Forms;
 
-namespace OODLessonProject
+namespace OODLessonProject.P1
 {
     public partial class P1Form : Form
     {
