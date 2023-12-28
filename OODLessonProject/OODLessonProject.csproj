@@ -59,6 +59,7 @@
     <Compile Include="P2\P2Form.Designer.cs">
       <DependentUpon>P2Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="P3\Matrix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Start.cs">
@@ -105,5 +106,6 @@
   <ItemGroup>
     <None Include="Resources\profile.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
