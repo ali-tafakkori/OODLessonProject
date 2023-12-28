@@ -13,15 +13,13 @@ namespace OODLessonProject
         private void BConvert_Click(object sender, System.EventArgs ev)
         {
             string input = tbInput.Text;
-            try {
-                lOutput.Text = Convert(input);
-            }
-            catch (Exception e) {
-                lOutput.Text = e.ToString();
-            }
+            string output = Convert(input);
+
+            lOutput.Text = "Output: " + output;
         }
 
-        string Convert(string expression) {
+        string Convert(string expression)
+        {
             string[] tokens = expression.Split(' ');
 
             Stack operators = new Stack();
@@ -63,12 +61,12 @@ namespace OODLessonProject
             return string.Join(" ", postfix.ToArray());
         }
 
-         bool IsOperator(string token)
+        bool IsOperator(string token)
         {
             return token == "+" || token == "-" || token == "*" || token == "/" || token == "^";
         }
 
-         bool IsHigherPrecedence(string op1, string op2)
+        bool IsHigherPrecedence(string op1, string op2)
         {
             int op1Precedence = GetOperatorPrecedence(op1);
             int op2Precedence = GetOperatorPrecedence(op2);
@@ -76,7 +74,7 @@ namespace OODLessonProject
             return op1Precedence >= op2Precedence;
         }
 
-         int GetOperatorPrecedence(string op)
+        int GetOperatorPrecedence(string op)
         {
             switch (op)
             {
