@@ -32,16 +32,16 @@ namespace OODLessonProject
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bOpen = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProjects = new System.Windows.Forms.DataGridView();
             this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProjects)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,18 +66,6 @@ namespace OODLessonProject
             this.bOpen.Text = "Open";
             this.bOpen.UseVisualStyleBackColor = true;
             this.bOpen.Click += new System.EventHandler(this.BOpen_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::OODLessonProject.Properties.Resources.profile;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -108,7 +96,7 @@ namespace OODLessonProject
             this.dgvProjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CName,
             this.CDescription,
-            this.CDate});
+            this.CPage});
             this.dgvProjects.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProjects.Location = new System.Drawing.Point(0, 0);
             this.dgvProjects.MultiSelect = false;
@@ -149,14 +137,26 @@ namespace OODLessonProject
             this.CDescription.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.CDescription.Width = 500;
             // 
-            // CDate
+            // CPage
             // 
-            this.CDate.HeaderText = "Date";
-            this.CDate.Name = "CDate";
-            this.CDate.ReadOnly = true;
-            this.CDate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.CDate.Width = 120;
+            this.CPage.HeaderText = "Page";
+            this.CPage.Name = "CPage";
+            this.CPage.ReadOnly = true;
+            this.CPage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.CPage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.CPage.Width = 120;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = global::OODLessonProject.Properties.Resources.profile;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Start
             // 
@@ -166,12 +166,13 @@ namespace OODLessonProject
             this.Controls.Add(this.dgvProjects);
             this.Controls.Add(this.panel1);
             this.Name = "Start";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Start";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProjects)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,9 +183,9 @@ namespace OODLessonProject
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvProjects;
+        private System.Windows.Forms.Button bOpen;
         private System.Windows.Forms.DataGridViewTextBoxColumn CName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CDate;
-        private System.Windows.Forms.Button bOpen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPage;
     }
 }
