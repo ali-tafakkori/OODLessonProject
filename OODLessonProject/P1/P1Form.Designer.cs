@@ -1,5 +1,5 @@
 ﻿
-namespace OODLessonProject
+namespace OODLessonProject.P1
 {
     partial class P1Form
     {
