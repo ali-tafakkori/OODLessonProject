@@ -38,10 +38,10 @@ namespace OODLessonProject
                 switch (index)
                 {
                     case 0:
-                        new P1Form().Show();
+                        new P1.P1Form().Show();
                         break;
                     case 1:
-                        new P2Form().Show();
+                        new P2.P2Form().Show();
                         break;
                 }
             }
