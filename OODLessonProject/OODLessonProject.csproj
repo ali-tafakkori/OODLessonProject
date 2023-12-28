@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="P1\P1Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="P1Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="P1Form.Designer.cs">
+    <Compile Include="P1\P1Form.Designer.cs">
       <DependentUpon>P1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P2\P2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P2\P2Form.Designer.cs">
+      <DependentUpon>P2Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,8 +66,11 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="P1Form.resx">
+    <EmbeddedResource Include="P1\P1Form.resx">
       <DependentUpon>P1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P2\P2Form.resx">
+      <DependentUpon>P2Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
