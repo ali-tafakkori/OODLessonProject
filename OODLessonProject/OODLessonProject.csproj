@@ -52,6 +52,7 @@
     <Compile Include="P1\P1Form.Designer.cs">
       <DependentUpon>P1Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="P2\Circle.cs" />
     <Compile Include="P2\P2Form.cs">
       <SubType>Form</SubType>
     </Compile>
