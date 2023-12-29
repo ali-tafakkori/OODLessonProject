@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace OODLessonProject.P2
+namespace OODLessonProject.P4
 {
     public partial class P4Form : Form
     {
@@ -9,17 +9,17 @@ namespace OODLessonProject.P2
         {
             InitializeComponent();
         }
-        private void BCalculate_Click(object sender, EventArgs ev)
+        private void BLentgh_Click_1(object sender, EventArgs ev)
         {
-            string input = tbRadius.Text;
-
+            string x1 = tbX1.Text;
+            string y1 = tbY1.Text;
+            string x2 = tbX2.Text;
+            string y2 = tbY2.Text;
             try
             {
-                int radius = int.Parse(input);
-                Circle circle = new Circle(radius);
+                Line line = new Line(new Point(int.Parse(x1),int.Parse(y1)), new Point(int.Parse(x2), int.Parse(y2)));
 
-                lPerimeter.Text = "Perimeter: " + circle.Perimeter();
-                lArea.Text = "Area: " + circle.Area();
+                lLength.Text = "Length: " + line.Length;
             }
             catch (Exception e)
             {
