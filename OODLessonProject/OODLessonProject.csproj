@@ -61,6 +61,12 @@
     </Compile>
     <Compile Include="P3\Matrix.cs" />
     <Compile Include="P4\Line.cs" />
+    <Compile Include="P4\P4Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P4\P4Form.Designer.cs">
+      <DependentUpon>P4Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="P4\Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="P2\P2Form.resx">
       <DependentUpon>P2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P4\P4Form.resx">
+      <DependentUpon>P4Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
