@@ -27,5 +27,17 @@ namespace OODLessonProject.P4
                 return Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
             }
         }
+        public double Slope
+        {
+            get
+            {
+                return (p1.Y - p2.Y) / (p1.X - p2.X);
+            }
+        }
+
+        public bool IsOn(Point pt)
+        {
+            return ((pt.Y - p1.Y) * (p2.X - p1.X) == (p2.Y - p1.Y) * (pt.X - p1.X));
+        }
     }
 }
