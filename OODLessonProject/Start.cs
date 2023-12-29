@@ -30,7 +30,7 @@ namespace OODLessonProject
             dgvProjects.Rows.Add(row2);
 
             DataGridViewRow row3 = new DataGridViewRow();
-            row2.Cells.AddRange(new DataGridViewCell[] {
+            row3.Cells.AddRange(new DataGridViewCell[] {
             new DataGridViewTextBoxCell{ Value = "تمرین 3",},
             new DataGridViewTextBoxCell{ Value = "به آرایه های دو بعدی ماتریس گفته میشود. هر ماتریس دارای تعدادی سطر و تعدادی ستون میباشد.کلاسی به نام Matrix برای مدل سازی یک ماتریس دو بعدی طراحی کنید. برای این کلاس سازنده های مورد نیاز و همچنین یک سازنده کپی پیاده سازی کنید."},
             new DataGridViewTextBoxCell{ Value = "27"},
@@ -57,6 +57,12 @@ namespace OODLessonProject
                         break;
                     case 1:
                         new P2.P2Form().Show();
+                        break;
+                    case 2:
+                        //new P3.P3Form().Show();
+                        break;
+                    case 3:
+                        new P4.P4Form().Show();
                         break;
                 }
             }
