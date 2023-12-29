@@ -233,6 +233,7 @@ namespace OODLessonProject.P4
             this.bIsOn.TabIndex = 20;
             this.bIsOn.Text = "Is on";
             this.bIsOn.UseVisualStyleBackColor = true;
+            this.bIsOn.Click += new System.EventHandler(this.BIsOn_Click);
             // 
             // lSlope
             // 
