@@ -24,20 +24,32 @@ namespace OODLessonProject.P4
         {
             get
             {
-                return Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
+                return Math.Sqrt(Math.Pow(p2.X - p1.X, 2) + Math.Pow(p2.Y - p1.Y, 2));
             }
         }
         public double Slope
         {
             get
             {
-                return (p1.Y - p2.Y) / (p1.X - p2.X);
+                if (p2.X - p1.X != 0)
+                {
+                    return (p2.Y - p1.Y) / (p2.X - p1.X);
+                }
+                else
+                {
+                    throw new InvalidOperationException("The line is vertical, and the slope is undefined.");
+                }
             }
         }
 
         public bool IsOn(Point pt)
         {
             return ((pt.Y - p1.Y) * (p2.X - p1.X) == (p2.Y - p1.Y) * (pt.X - p1.X));
+        }
+
+        public static Line operator +(Line l1, Line l2)
+        {
+            return new Line(l1.p1, l2.p2);
         }
     }
 }
