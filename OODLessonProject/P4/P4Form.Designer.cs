@@ -180,9 +180,8 @@ namespace OODLessonProject.P4
             this.lIsOn.AutoSize = true;
             this.lIsOn.Location = new System.Drawing.Point(422, 244);
             this.lIsOn.Name = "lIsOn";
-            this.lIsOn.Size = new System.Drawing.Size(95, 13);
+            this.lIsOn.Size = new System.Drawing.Size(0, 13);
             this.lIsOn.TabIndex = 26;
-            this.lIsOn.Text = "Is on the Line: Yes";
             // 
             // lPointX
             // 
