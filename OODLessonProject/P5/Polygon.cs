@@ -1,18 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System;
 
 namespace OODLessonProject.P5
 {
     class Polygon
     {
-        private List<Point> points;
+        private Point[] points;
 
-        public Polygon(List<Point> points)
+        public Polygon(Point[] points)
         {
-            this.points = new List<Point>();
+            this.points = new Point[points.Length];
 
-            foreach (Point p in points)
+            for (int i = 0; i < points.Length; i++)
             {
-                this.points.Add(p);
+                this.points[i] = points[i];
             }
         }
 
@@ -20,10 +20,14 @@ namespace OODLessonProject.P5
         {
             get
             {
+                if (i < 0 || i >= points.Length)
+                    throw new Exception("Index out of range");
                 return points[i];
             }
             set
             {
+                if (i < 0 || i >= points.Length)
+                    throw new Exception("Index out of range");
                 points[i] = value;
             }
         }
