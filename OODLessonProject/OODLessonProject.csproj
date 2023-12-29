@@ -68,6 +68,7 @@
       <DependentUpon>P4Form.cs</DependentUpon>
     </Compile>
     <Compile Include="P4\Point.cs" />
+    <Compile Include="P5\Polygon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Start.cs">
