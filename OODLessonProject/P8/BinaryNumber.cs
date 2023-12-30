@@ -24,6 +24,10 @@ namespace OODLessonProject.P8
 
         }
 
+        public BinaryNumber(BinaryNumber binaryNumber) {
+            this.binaryValue = binaryNumber.binaryValue;
+        }
+
         public string Value
         {
             get
@@ -49,14 +53,14 @@ namespace OODLessonProject.P8
             }
         }
 
-        public string Not()
+        public BinaryNumber Not()
         {
             string result = "";
             foreach (char bit in binaryValue)
             {
                 result += (bit == '0') ? '1' : '0';
             }
-            return result;
+            return new BinaryNumber(result);
         }
 
         public BinaryNumber Or(BinaryNumber otherBinary)

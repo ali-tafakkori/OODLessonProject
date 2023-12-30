@@ -83,6 +83,12 @@
     <Compile Include="P7\Node.cs" />
     <Compile Include="P7\Student.cs" />
     <Compile Include="P8\BinaryNumber.cs" />
+    <Compile Include="P8\P8Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P8\P8Form.Designer.cs">
+      <DependentUpon>P8Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="P9\P9Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="P4\P4Form.resx">
       <DependentUpon>P4Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P8\P8Form.resx">
+      <DependentUpon>P8Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="P9\P9Form.resx">
       <DependentUpon>P9Form.cs</DependentUpon>
