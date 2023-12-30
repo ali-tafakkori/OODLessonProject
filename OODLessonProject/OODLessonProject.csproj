@@ -76,6 +76,7 @@
     <Compile Include="P7\Node.cs" />
     <Compile Include="P7\Student.cs" />
     <Compile Include="P8\BinaryNumber.cs" />
+    <Compile Include="P9\Program.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Start.cs">
