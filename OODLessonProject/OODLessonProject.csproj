@@ -72,6 +72,9 @@
     <Compile Include="P5\Point.cs" />
     <Compile Include="P5\Polygon.cs" />
     <Compile Include="P6\Vector.cs" />
+    <Compile Include="P7\LinkedList.cs" />
+    <Compile Include="P7\Node.cs" />
+    <Compile Include="P7\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Start.cs">
