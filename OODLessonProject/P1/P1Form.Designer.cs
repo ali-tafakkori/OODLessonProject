@@ -62,7 +62,7 @@ namespace OODLessonProject.P1
             this.lDesc.Location = new System.Drawing.Point(12, 44);
             this.lDesc.Name = "lDesc";
             this.lDesc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lDesc.Size = new System.Drawing.Size(776, 82);
+            this.lDesc.Size = new System.Drawing.Size(776, 178);
             this.lDesc.TabIndex = 2;
             this.lDesc.Text = resources.GetString("lDesc.Text");
             // 
