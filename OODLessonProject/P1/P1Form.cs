@@ -22,26 +22,28 @@ namespace OODLessonProject.P1
         {
             string[] tokens = expression.Split(' ');
 
-            Stack operators = new Stack();
+            Stack operators = new Stack(tokens.Length);
             Queue postfix = new Queue();
 
-            foreach (string token in tokens)
+            foreach (string t in tokens)
             {
+                char token = t[0];
+
                 if (IsOperator(token))
                 {
-                    while (operators.Count > 0 && IsHigherPrecedence((string)operators.Peek(), token))
+                    while (operators.Size > 0 && IsHigherPrecedence(operators.Read(), token))
                     {
                         postfix.Enqueue(operators.Pop());
                     }
                     operators.Push(token);
                 }
-                else if (token == "(")
+                else if (token == '(')
                 {
                     operators.Push(token);
                 }
-                else if (token == ")")
+                else if (token == ')')
                 {
-                    while ((string)operators.Peek() != "(")
+                    while (operators.Read().ToString() != "(")
                     {
                         postfix.Enqueue(operators.Pop());
                     }
@@ -53,7 +55,7 @@ namespace OODLessonProject.P1
                 }
             }
 
-            while (operators.Count > 0)
+            while (operators.Size > 0)
             {
                 postfix.Enqueue(operators.Pop());
             }
@@ -61,12 +63,12 @@ namespace OODLessonProject.P1
             return string.Join(" ", postfix.ToArray());
         }
 
-        bool IsOperator(string token)
+        bool IsOperator(char token)
         {
-            return token == "+" || token == "-" || token == "*" || token == "/" || token == "^";
+            return token == '+' || token == '-' || token == '*' || token == '/' || token == '^';
         }
 
-        bool IsHigherPrecedence(string op1, string op2)
+        bool IsHigherPrecedence(char op1, char op2)
         {
             int op1Precedence = GetOperatorPrecedence(op1);
             int op2Precedence = GetOperatorPrecedence(op2);
@@ -74,17 +76,17 @@ namespace OODLessonProject.P1
             return op1Precedence >= op2Precedence;
         }
 
-        int GetOperatorPrecedence(string op)
+        int GetOperatorPrecedence(char op)
         {
             switch (op)
             {
-                case "+":
-                case "-":
+                case '+':
+                case '-':
                     return 1;
-                case "*":
-                case "/":
+                case '*':
+                case '/':
                     return 2;
-                case "^":
+                case '^':
                     return 3;
                 default:
                     return 0;
