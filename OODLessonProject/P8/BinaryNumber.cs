@@ -110,7 +110,7 @@ namespace OODLessonProject.P8
 
         public BinaryNumber TwosComplement()
         {
-            string onesComplement = this.Not();
+            BinaryNumber onesComplement = this.Not();
             string twosComplement = "";
             bool carry = true;
 
