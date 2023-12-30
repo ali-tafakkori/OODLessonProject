@@ -4,8 +4,8 @@
     {
         private static int idCounter = 100;
 
-        private int data;
-        private int id;
+        int data;
+        public int id;
 
         public Node(int data)
         {

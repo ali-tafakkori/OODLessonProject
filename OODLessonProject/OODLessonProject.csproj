@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="P10\Node.cs" />
+    <Compile Include="P10\P10Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P10\P10Form.Designer.cs">
+      <DependentUpon>P10Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="P1\P1Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     <Compile Include="P7\Node.cs" />
     <Compile Include="P7\Student.cs" />
     <Compile Include="P8\BinaryNumber.cs" />
+    <Compile Include="P9\P9Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P9\P9Form.Designer.cs">
+      <DependentUpon>P9Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="P9\Program.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +98,9 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="P10\P10Form.resx">
+      <DependentUpon>P10Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="P1\P1Form.resx">
       <DependentUpon>P1Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="P4\P4Form.resx">
       <DependentUpon>P4Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P9\P9Form.resx">
+      <DependentUpon>P9Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -67,6 +67,9 @@ namespace OODLessonProject
                     case 8:
                         new P9.P9Form().Show();
                         break;
+                    case 9:
+                        new P10.P10Form().Show();
+                        break;
                 }
             }
         }
