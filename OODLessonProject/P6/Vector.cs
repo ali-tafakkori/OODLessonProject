@@ -6,8 +6,9 @@ namespace OODLessonProject.P6
     {
         public Vector(int size)
         {
-            if (size > 0)
-                this.size = size;
+            if (size <= 0)
+                throw new Exception("Vector size must be at least one");
+            this.size = size;
             this.data = new int[this.size];
         }
         public Vector(Vector v)
@@ -17,7 +18,7 @@ namespace OODLessonProject.P6
             for (int i = 0; i < this.size; i++)
                 this.data[i] = v.data[i];
         }
-        private int size = 10;
+        private int size;
         private int[] data;
         public int Size
         {
