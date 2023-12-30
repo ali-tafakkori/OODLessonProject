@@ -8,14 +8,10 @@ namespace OODLessonProject.P8
 
         public BinaryNumber(string s)
         {
-            bool flag = true;
             for (int i = 0; i < s.Length; i++)
             {
-                if (flag == true && s[i] == '0')
-                    continue;
                 if (s[i] == '0' || s[i] == '1')
                 {
-                    flag = false;
                     binaryValue = s[i].ToString() + binaryValue;
                 }
                 else
