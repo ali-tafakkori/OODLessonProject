@@ -1,4 +1,6 @@
-﻿namespace OODLessonProject.P3
+﻿using System;
+
+namespace OODLessonProject.P3
 {
     class Matrix
     {
@@ -18,24 +20,35 @@
             data = other.data;
         }
 
-        public int GetRowsCount()
+        public int RowsCount
         {
-            return data.GetLength(0);
+            get
+            {
+                return data.GetLength(0);
+            }
+        }
+        public int ColumnsCount
+        {
+            get
+            {
+                return data.GetLength(1);
+            }
         }
 
-        public int GetColumnsCount()
+        public int this[int row, int col]
         {
-            return data.GetLength(1);
-        }
-
-        public int GetValue(int row, int col)
-        {
-            return data[row, col];
-        }
-
-        public void SetValue(int row, int col, int value)
-        {
-            data[row, col] = value;
+            get
+            {
+                if (row < 0 || row >= RowsCount || col < 0 || col >= ColumnsCount)
+                    throw new Exception("Index out of range");
+                return data[row, col];
+            }
+            set
+            {
+                if (row < 0 || row >= RowsCount || col < 0 || col >= ColumnsCount)
+                    throw new Exception("Index out of range");
+                data[row, col] = value;
+            }
         }
     }
 }
