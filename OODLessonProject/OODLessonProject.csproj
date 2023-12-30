@@ -53,6 +53,8 @@
     <Compile Include="P10\P10Form.Designer.cs">
       <DependentUpon>P10Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="P11\LinkedList.cs" />
+    <Compile Include="P11\Node.cs" />
     <Compile Include="P1\P1Form.cs">
       <SubType>Form</SubType>
     </Compile>
