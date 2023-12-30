@@ -52,7 +52,7 @@ namespace OODLessonProject
                         new P2.P2Form().Show();
                         break;
                     case 3:
-                        //new P3.P3Form().Show();
+                        new P3.P3Form().Show();
                         break;
                     case 4:
                         new P4.P4Form().Show();

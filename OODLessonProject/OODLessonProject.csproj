@@ -70,6 +70,12 @@
       <DependentUpon>P2Form.cs</DependentUpon>
     </Compile>
     <Compile Include="P3\Matrix.cs" />
+    <Compile Include="P3\P3Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P3\P3Form.Designer.cs">
+      <DependentUpon>P3Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="P4\Line.cs" />
     <Compile Include="P4\P4Form.cs">
       <SubType>Form</SubType>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="P2\P2Form.resx">
       <DependentUpon>P2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P3\P3Form.resx">
+      <DependentUpon>P3Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="P4\P4Form.resx">
       <DependentUpon>P4Form.cs</DependentUpon>
