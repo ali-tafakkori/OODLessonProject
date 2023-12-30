@@ -10,7 +10,7 @@ namespace OODLessonProject.P9
 
         public Program(string path)
         {
-            if (count > 1) 
+            if (count >= 1) 
                 throw new Exception("Can't create twice");
             count++;
 
