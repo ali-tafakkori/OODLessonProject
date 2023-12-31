@@ -4,22 +4,24 @@ namespace OODLessonProject.P6
 {
     class Vector
     {
+        private int size;
+        private int[] data;
+
         public Vector(int size)
         {
             if (size <= 0)
                 throw new Exception("Vector size must be at least one");
             this.size = size;
-            this.data = new int[this.size];
+            data = new int[size];
         }
         public Vector(Vector v)
         {
-            this.size = v.Size;
-            this.data = new int[this.size];
-            for (int i = 0; i < this.size; i++)
-                this.data[i] = v.data[i];
+            size = v.Size;
+            data = new int[this.size];
+            for (int i = 0; i < size; i++)
+                data[i] = v.data[i];
         }
-        private int size;
-        private int[] data;
+
         public int Size
         {
             get { return this.size; }
@@ -40,19 +42,26 @@ namespace OODLessonProject.P6
             }
         }
 
-        public string Print()
-        {
-            string res = "";
-            foreach (int d in data)
-            {
-                res += (d + " ");
-            }
-            return res;
-        }
         public void Sort()
         {
-            Array.Sort(data);
+            int t;
+            for (int i = 1; i < size; i++)
+                for (int j = 0; j < size - i; j++)
+                    if (data[j] > data[j + 1])
+                    {
+                        t = data[j];
+                        data[j] = data[j + 1];
+                        data[j + 1] = t;
+                    }
         }
+        public string Print()
+        {
+            string str = "";
+            for (int i = 0; i < size; i++)
+                str += data[i].ToString() + " ";
+            return str;
+        }
+
         public int Search(int value)
         {
             for (int i = 0; i < data.Length; i++)
