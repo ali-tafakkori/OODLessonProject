@@ -13,10 +13,10 @@ namespace OODLessonProject.P6
         }
         private void BCreate_Click(object sender, EventArgs ev)
         {
-            string row = tbRow.Text;
+            string size = tbSize.Text;
             try
             {
-                vector = new Vector(int.Parse(row));
+                vector = new Vector(int.Parse(size));
             }
             catch (Exception e)
             {
@@ -24,13 +24,12 @@ namespace OODLessonProject.P6
             }
         }
 
-        private void bGet_Click(object sender, EventArgs e)
+        private void BGet_Click(object sender, EventArgs e)
         {
-            string row = tbRowIndex.Text;
-            string col = tbColIndex.Text;
+            string index = tbIndex.Text;
             try
             {
-                tbValue.Text = vector[int.Parse(row), int.Parse(col)].ToString();
+                tbValue.Text = vector[int.Parse(index)].ToString();
             }
             catch (Exception ex)
             {
@@ -38,13 +37,36 @@ namespace OODLessonProject.P6
             }
         }
 
-        private void bSet_Click(object sender, EventArgs e)
+        private void BSet_Click(object sender, EventArgs e)
         {
-            string row = tbRowIndex.Text;
-            string col = tbColIndex.Text;
+            string row = tbIndex.Text;
             try
             {
-                vector[int.Parse(row), int.Parse(col)] = int.Parse(tbValue.Text);
+                vector[int.Parse(row)] = int.Parse(tbValue.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void BSort_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                vector.Sort();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void BPrint_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lVector.Text = vector.Print();
             }
             catch (Exception ex)
             {

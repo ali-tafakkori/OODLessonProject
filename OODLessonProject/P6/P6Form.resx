@@ -117,11 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lDesc.Text" xml:space="preserve">
-    <value> به آرایههای دو بعدی ماتریس گفته میشود. هر ماتریس دارای تعدادی سطر و تعدادی ستون میباشد.کالسی 
-به نام Matrix برای مدل سازی یک ماتریس دو بعدی طراحی کنید. برای این کالس سازندههای مورد نیاز و همچنین 
-یک سازنده کپی پیاده سازی کنید.
-
-کالس Matrix برای آرایههای دوبعدی را با در نظر گرفتن مفهوم property تکمیل کنید.</value>
-  </data>
 </root>
