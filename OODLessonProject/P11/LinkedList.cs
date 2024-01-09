@@ -11,7 +11,7 @@ namespace OODLessonProject.P11
         private Node<T> head;
         private Node<T> tail;
 
-        public void AddToBeginning(T data)
+        public void AddToFirst(T data)
         {
             Node<T> newNode = new Node<T> { Data = data };
             if (head == null)
@@ -25,7 +25,7 @@ namespace OODLessonProject.P11
                 head = newNode;
             }
         }
-        public void AddToEnd(T data)
+        public void AddToLast(T data)
         {
             Node<T> newNode = new Node<T> { Data = data };
             if (tail == null)
@@ -51,7 +51,7 @@ namespace OODLessonProject.P11
                 }
             }
         }
-        public void RemoveFromBeginning()
+        public void RemoveFromFirst()
         {
             if (head != null)
             {
@@ -62,7 +62,7 @@ namespace OODLessonProject.P11
                 }
             }
         }
-        public void RemoveFromEnd()
+        public void RemoveFromLast()
         {
             if (head == tail)
             {
@@ -91,18 +91,18 @@ namespace OODLessonProject.P11
                 existingNode.Next = existingNode.Next.Next;
             }
         }
-        public bool Search(T data)
+        public Node<T> Search(T data)
         {
             Node<T> current = head;
             while (current != null)
             {
                 if (current.Data.Equals(data))
                 {
-                    return true;
+                    return current;
                 }
                 current = current.Next;
             }
-            return false;
+            return null;
         }
         public void Reverse()
         {
@@ -118,14 +118,16 @@ namespace OODLessonProject.P11
             }
             head = previous;
         }
-        public void LinearTraversal()
+        public string Print()
         {
+            string s = "";
             Node<T> current = head;
             while (current != null)
             {
-                Console.WriteLine(current.Data);
+                s += current.Data + " ";
                 current = current.Next;
             }
+            return s;
         }
     }
 }
