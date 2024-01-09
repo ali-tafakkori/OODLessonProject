@@ -64,7 +64,7 @@ namespace OODLessonProject
                         new P6.P6Form().Show();
                         break;
                     case 7:
-                        //new P7.P7Form().Show();
+                        new P7.P7Form().Show();
                         break;
                     case 8:
                         new P8.P8Form().Show();

@@ -8,17 +8,28 @@
         public void Add(Student data)
         {
             Node newNode = new Node(data);
-            if (first == null)
+            if (last == null)
             {
                 first = newNode;
-                last = first;
+                last = newNode;
             }
             else
             {
                 last.Next = newNode;
                 last = newNode;
             }
-            last.Next = first;
+        }
+
+        public string Print()
+        {
+            string s = "";
+            Node current = first;
+            while (current != null)
+            {
+                s += current.Data.StudentID + " : " + current.Data.Name + ", ";
+                current = current.Next;
+            }
+            return s;
         }
     }
 }
