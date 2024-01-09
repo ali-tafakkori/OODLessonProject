@@ -32,17 +32,17 @@ namespace OODLessonProject.P5
             this.tbInput = new System.Windows.Forms.TextBox();
             this.lTitle = new System.Windows.Forms.Label();
             this.lDesc = new System.Windows.Forms.Label();
-            this.lEnterInfixExpression = new System.Windows.Forms.Label();
-            this.bConvert = new System.Windows.Forms.Button();
+            this.bCreate = new System.Windows.Forms.Button();
             this.lOutput = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lSize = new System.Windows.Forms.Label();
+            this.panel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // tbInput
             // 
-            this.tbInput.Location = new System.Drawing.Point(235, 274);
+            this.tbInput.Location = new System.Drawing.Point(48, 95);
             this.tbInput.Name = "tbInput";
-            this.tbInput.Size = new System.Drawing.Size(283, 20);
+            this.tbInput.Size = new System.Drawing.Size(90, 20);
             this.tbInput.TabIndex = 0;
             // 
             // lTitle
@@ -66,24 +66,15 @@ namespace OODLessonProject.P5
             this.lDesc.Text = "کلاسی به نام Polygon برای چند ضلعی طراحی کنید. یک چند ضلعی از لیستی از نقاط تشکیل" +
     " شده است.";
             // 
-            // lEnterInfixExpression
+            // bCreate
             // 
-            this.lEnterInfixExpression.AutoSize = true;
-            this.lEnterInfixExpression.Location = new System.Drawing.Point(232, 258);
-            this.lEnterInfixExpression.Name = "lEnterInfixExpression";
-            this.lEnterInfixExpression.Size = new System.Drawing.Size(110, 13);
-            this.lEnterInfixExpression.TabIndex = 3;
-            this.lEnterInfixExpression.Text = "Enter Infix expression:";
-            // 
-            // bConvert
-            // 
-            this.bConvert.Location = new System.Drawing.Point(443, 313);
-            this.bConvert.Name = "bConvert";
-            this.bConvert.Size = new System.Drawing.Size(75, 23);
-            this.bConvert.TabIndex = 4;
-            this.bConvert.Text = "Convert";
-            this.bConvert.UseVisualStyleBackColor = true;
-            this.bConvert.Click += new System.EventHandler(this.BConvert_Click);
+            this.bCreate.Location = new System.Drawing.Point(144, 93);
+            this.bCreate.Name = "bCreate";
+            this.bCreate.Size = new System.Drawing.Size(75, 23);
+            this.bCreate.TabIndex = 4;
+            this.bCreate.Text = "Create";
+            this.bCreate.UseVisualStyleBackColor = true;
+            this.bCreate.Click += new System.EventHandler(this.BCreate_Click);
             // 
             // lOutput
             // 
@@ -93,24 +84,33 @@ namespace OODLessonProject.P5
             this.lOutput.Size = new System.Drawing.Size(0, 13);
             this.lOutput.TabIndex = 5;
             // 
-            // label1
+            // lSize
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(235, 297);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "exmple: 3 + 4 * 2 / ( 1 - 5 ) ^ 2 ^ 3";
+            this.lSize.AutoSize = true;
+            this.lSize.Location = new System.Drawing.Point(12, 98);
+            this.lSize.Name = "lSize";
+            this.lSize.Size = new System.Drawing.Size(30, 13);
+            this.lSize.TabIndex = 6;
+            this.lSize.Text = "Size:";
+            // 
+            // panel
+            // 
+            this.panel.BackColor = System.Drawing.Color.White;
+            this.panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel.Location = new System.Drawing.Point(12, 132);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(776, 306);
+            this.panel.TabIndex = 7;
             // 
             // P5Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel);
+            this.Controls.Add(this.lSize);
             this.Controls.Add(this.lOutput);
-            this.Controls.Add(this.bConvert);
-            this.Controls.Add(this.lEnterInfixExpression);
+            this.Controls.Add(this.bCreate);
             this.Controls.Add(this.lDesc);
             this.Controls.Add(this.lTitle);
             this.Controls.Add(this.tbInput);
@@ -133,9 +133,9 @@ namespace OODLessonProject.P5
         private System.Windows.Forms.TextBox tbInput;
         private System.Windows.Forms.Label lTitle;
         private System.Windows.Forms.Label lDesc;
-        private System.Windows.Forms.Label lEnterInfixExpression;
-        private System.Windows.Forms.Button bConvert;
+        private System.Windows.Forms.Button bCreate;
         private System.Windows.Forms.Label lOutput;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lSize;
+        private System.Windows.Forms.Panel panel;
     }
 }

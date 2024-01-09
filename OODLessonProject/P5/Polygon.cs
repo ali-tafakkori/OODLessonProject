@@ -16,6 +16,13 @@ namespace OODLessonProject.P5
             }
         }
 
+        public int Size
+        {
+            get {
+                return points.Length;
+            }
+        }
+
         public Point this[int i]
         {
             get

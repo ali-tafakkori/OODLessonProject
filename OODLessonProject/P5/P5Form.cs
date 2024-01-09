@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace OODLessonProject.P5
@@ -10,86 +11,47 @@ namespace OODLessonProject.P5
         {
             InitializeComponent();
         }
-        private void BConvert_Click(object sender, System.EventArgs ev)
+        private Point[] GenPoly(int PointCount)
+        {
+            var rgen = new Random();
+            //select a number of points in the given range.
+            var PolyPoints = new Point[PointCount];
+            //calculate the angle between each generated point.
+            float Angle = (float)((Math.PI * 2) / PointCount);
+            for (int i = 0; i < PointCount; i++)
+            {
+                //generate this point, generating a radius between the given minimum and maximum range.
+                float RadiusUse = (float)((rgen.NextDouble() * (2 * Math.PI)));
+                float useangle = Angle * i;
+                Point newPoint = new Point((int)(20 + Math.Abs((float)Math.Sin(useangle) * RadiusUse * 10)), (int)(20 + Math.Abs((float)Math.Cos(useangle) * RadiusUse * 10)));
+
+                PolyPoints[i] = newPoint;
+            }
+            return PolyPoints;
+        }
+        private void BCreate_Click(object sender, System.EventArgs ev)
         {
             string input = tbInput.Text;
-            string output = Convert(input);
-
-            lOutput.Text = "Output: " + output;
-        }
-
-        string Convert(string expression)
-        {
-            string[] tokens = expression.Split(' ');
-
-            Stack operators = new Stack(tokens.Length);
-            Queue postfix = new Queue();
-
-            foreach (string t in tokens)
+            try
             {
-                char token = t[0];
 
-                if (IsOperator(token))
+                Point[] points = GenPoly(int.Parse(input));
+
+                Polygon polygon = new Polygon(points);
+
+                PointF[] pointFs = new PointF[polygon.Size];
+
+                for (int i = 0; i < polygon.Size; i++)
                 {
-                    while (operators.Size > 0 && IsHigherPrecedence(operators.Read(), token))
-                    {
-                        postfix.Enqueue(operators.Pop());
-                    }
-                    operators.Push(token);
+                    pointFs[i] = new PointF(polygon[i].X, polygon[i].Y);
                 }
-                else if (token == '(')
-                {
-                    operators.Push(token);
-                }
-                else if (token == ')')
-                {
-                    while (operators.Read().ToString() != "(")
-                    {
-                        postfix.Enqueue(operators.Pop());
-                    }
-                    operators.Pop();
-                }
-                else
-                {
-                    postfix.Enqueue(token);
-                }
+
+                panel.CreateGraphics().Clear(Color.White);
+                panel.CreateGraphics().DrawPolygon(new Pen(Color.Red), pointFs);
             }
-
-            while (operators.Size > 0)
+            catch (Exception ex)
             {
-                postfix.Enqueue(operators.Pop());
-            }
-
-            return string.Join(" ", postfix.ToArray());
-        }
-
-        bool IsOperator(char token)
-        {
-            return token == '+' || token == '-' || token == '*' || token == '/' || token == '^';
-        }
-
-        bool IsHigherPrecedence(char op1, char op2)
-        {
-            int op1Precedence = GetOperatorPrecedence(op1);
-            int op2Precedence = GetOperatorPrecedence(op2);
-
-            return op1Precedence >= op2Precedence;
-        }
-
-        int GetOperatorPrecedence(char op)
-        {
-            switch (op)
-            {
-                case '+':
-                case '-':
-                    return 1;
-                case '*':
-                case '/':
-                    return 2;
-                case '^':
-                    return 3;
-                default:
-                    return 0;
+                MessageBox.Show(ex.ToString());
             }
         }
     }

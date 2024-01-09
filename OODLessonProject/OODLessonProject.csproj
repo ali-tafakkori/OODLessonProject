@@ -86,6 +86,12 @@
     <Compile Include="P4\Point.cs" />
     <Compile Include="P5\Point.cs" />
     <Compile Include="P5\Polygon.cs" />
+    <Compile Include="P5\P5Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P5\P5Form.Designer.cs">
+      <DependentUpon>P5Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="P6\P6Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="P4\P4Form.resx">
       <DependentUpon>P4Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P5\P5Form.resx">
+      <DependentUpon>P5Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="P6\P6Form.resx">
       <DependentUpon>P6Form.cs</DependentUpon>
